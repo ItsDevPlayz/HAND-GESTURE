@@ -26,6 +26,12 @@ Webcam.set({
         console.log('Model Loaded');
     }
     
+function check(){
+    img=document.getElementById('captured_image')
+    classifier.classify(img, gotResult)
+}
+
+
     function speak(){
     var synth=window.speechSynthesis;
     speak_data_1="The first predicition is "+prediction_1;
